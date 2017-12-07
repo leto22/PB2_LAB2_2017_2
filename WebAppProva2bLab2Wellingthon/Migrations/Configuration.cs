@@ -31,6 +31,19 @@ namespace WebAppProva2bLab2Wellingthon.Migrations
 
         private void PopularDados(LocadoraContext contexto)
         {
+
+            var enderecos = new List<Endereco>
+            {
+                new Endereco
+                {
+                    Logradouro = "Rua Frango D'Agua",
+                    Bairro = "CPA IV",
+                    CEP = "78058-260",
+                    Numero = "21"
+                }
+            };
+            contexto.Enderecos.AddRange(enderecos);
+
             var socios = new List<Socio>
             {
                 new Socio
@@ -43,13 +56,15 @@ namespace WebAppProva2bLab2Wellingthon.Migrations
             };
             contexto.Socios.AddRange(socios);
 
-            var enderecos = new List<Endereco>
+            var locacoes = new List<Locacao>
             {
-                new Endereco
+                new Locacao
                 {
-
+                    Numero = 1,
+                    LocacaoData = DateTime.Now
                 }
             };
+            contexto.Locadoras.AddRange(locacoes);
         }
     }
 }
