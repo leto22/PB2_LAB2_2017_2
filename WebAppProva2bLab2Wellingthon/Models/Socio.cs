@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -12,7 +13,6 @@ namespace WebAppProva2bLab2.Wellingthon.Models
         public string Email { get; set; }
 
         public virtual Endereco Endereco { get; set; }
-        public int EnderecoID { get; set; }
 
         public virtual List<Locacao> Locacoes { get; set; }
     }

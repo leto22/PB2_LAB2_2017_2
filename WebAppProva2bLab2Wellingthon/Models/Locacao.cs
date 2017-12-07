@@ -11,8 +11,8 @@ namespace WebAppProva2bLab2.Wellingthon.Models
         public int Numero { get; set; }
         public DateTime LocacaoData { get; set; }
 
+        
         public virtual Socio Socio { get; set; }
-        public int SocioID { get; set; }
 
         public virtual List<Tipo> Tipos { get; set; }
 

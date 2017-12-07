@@ -1,9 +1,11 @@
 namespace WebAppProva2bLab2Wellingthon.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using WebAppProva2bLab2.Wellingthon.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<WebAppProva2bLab2.Wellingthon.Models.LocadoraContext>
     {
@@ -14,18 +16,40 @@ namespace WebAppProva2bLab2Wellingthon.Migrations
 
         protected override void Seed(WebAppProva2bLab2.Wellingthon.Models.LocadoraContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            if (context.Socios.Any()) return;
+            try
+            {
+                PopularDados(context);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                // TODO: fazer log de erro
+                ex.ToString();
+            }
+        }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+        private void PopularDados(LocadoraContext contexto)
+        {
+            var socios = new List<Socio>
+            {
+                new Socio
+                {
+                    Nome = "Leto",
+                    Email = "leto@gmail.com",
+                    Endereco = [0]
+
+                },
+            };
+            contexto.Socios.AddRange(socios);
+
+            var enderecos = new List<Endereco>
+            {
+                new Endereco
+                {
+
+                }
+            };
         }
     }
 }

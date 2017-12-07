@@ -17,7 +17,5 @@ namespace WebAppProva2bLab2.Wellingthon.Models
         public string Numero { get; set; }
 
         public virtual Socio Socio { get; set; }
-        [ForeignKey]
-        public int SocioID { get; set; }
     }
 }

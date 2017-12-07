@@ -12,6 +12,5 @@ namespace WebAppProva2bLab2.Wellingthon.Models
         public string Descricao { get; set; }
 
         public virtual Locacao Locacao { get; set; }
-        public int LocacaoID { get; set; }
     }
 }

@@ -36,6 +36,8 @@ namespace WebAppProva2bLab2.Wellingthon.Models
 
             modelBuilder.Types()
                 .Configure(t => t.MapToStoredProcedures());
+
+            modelBuilder.Configurations.Add(new EnderecoTypeConfigurations());
         }
 
     }

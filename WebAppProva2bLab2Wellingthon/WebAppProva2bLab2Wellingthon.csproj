@@ -198,6 +198,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\EnderecoTypeConfigurations.cs" />
     <Compile Include="Models\Filme.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Locacao.cs" />
@@ -206,6 +207,7 @@
     <Compile Include="Models\Socio.cs" />
     <Compile Include="Models\Tipo.cs" />
     <Compile Include="Models\TipoPromocao.cs" />
+    <Compile Include="Models\TypeConfigurations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
